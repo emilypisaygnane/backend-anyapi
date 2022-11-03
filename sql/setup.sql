@@ -12,11 +12,11 @@ CREATE TABLE dogs (
 
 INSERT INTO dogs (name, age, breed, favoriteTreat)
 VALUES
-  ('Korra', 1, 'Pyrador', 'Old Mother Hubbard Oven-Baked Biscuits'),
-  ('Lilo', 1, 'Pitbull/Shepard', 'Blueberries'),
+  ('Korra', 1, 'Pyrador', 'Oven-Baked Biscuits'),
+  ('Lilo', 1, 'Pitbull/Shepherd', 'Blueberries'),
   ('Cupcake', 12, 'Maltese/Bichon', 'Chicken Treats'),
   ('Pocky', 2, 'Doxie/Maltese', 'Turkey Treats'),
-  ('Malibu', 2, 'Shizu/Maltese', 'Sweet Potato/Turkey Treats'),
+  ('Malibu', 2, 'Shi Tzu/Maltese', 'Yak Cheese'),
   ('Mia', 1, 'Mini Poodle', 'All Treats');
 
   DROP TABLE IF EXISTS cars;
@@ -33,7 +33,7 @@ VALUES
   VALUES
   ('Lexus', 'IS500 F-Sport', 2022, 472),
   ('Jeep', 'Wrangler', 2022, 285),
-  ('Brabus', 'Rocket 900' 2022, 900),
+  ('Brabus', 'Rocket 900', 2022, 900),
   ('Mercedes', 'G-Class', 2022, 577),
-  ('Toyota', 'TRD Pro', 2023, 270),
+  ('Toyota', '4-Runner TRD Pro', 2023, 270),
   ('Honda', 'S2000', 2000, 240);
