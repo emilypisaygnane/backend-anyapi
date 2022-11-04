@@ -4,7 +4,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 const { dogs } = require('../lib/dog-data');
 
-describe('dog routes', () => {
+describe('dog routes, and car routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -27,6 +27,14 @@ describe('dog routes', () => {
       favoriteTreat: 'Oven-Baked Biscuits'
     };
     expect(res.body).toEqual(korra);
+  });
+
+  it('/cars should return a list of cars', async () => {
+    const res = await request(app).get('/cars');
+    const expected = cars.map((car) => {
+      return { id: car.id, name: car.name };
+    });
+    expect(res.body).toEqual(expected);
   });
 
   afterAll(() => {
