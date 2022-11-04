@@ -3,13 +3,14 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const { dogs } = require('../lib/dog-data');
+const { cars } = require('../lib/car-data');
 
 describe('dog routes, and car routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
 
-  it('./dogs should return a list of dogs', async () => {
+  it('/dogs should return a list of dogs', async () => {
     const res = await request(app).get('/dogs');
     const expected = dogs.map((dog) => {
       return { id: dog.id, name: dog.name };
