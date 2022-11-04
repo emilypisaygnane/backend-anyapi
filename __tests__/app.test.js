@@ -38,6 +38,18 @@ describe('dog routes, and car routes', () => {
     expect(res.body).toEqual(expected);
   });
 
+  it('/cars/:id should return car details', async () => {
+    const res = await request(app).get('/cars/1');
+    const lexus = {
+      id: '1',
+      make: 'Lexus',
+      model: 'IS500 F-Sport',
+      year: 2022,
+      horsepower: 472
+    };
+    expect(res.body).toEqual(lexus);
+  });
+
   afterAll(() => {
     pool.end();
   });
