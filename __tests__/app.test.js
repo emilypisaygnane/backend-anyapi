@@ -33,7 +33,7 @@ describe('dog routes, and car routes', () => {
   it('/cars should return a list of cars', async () => {
     const res = await request(app).get('/cars');
     const expected = cars.map((car) => {
-      return { id: car.id, name: car.name };
+      return { id: car.id, make: car.make, model: car.model };
     });
     expect(res.body).toEqual(expected);
   });
