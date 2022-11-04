@@ -15,6 +15,18 @@ describe('dog routes', () => {
       return { id: dog.id, name: dog.name };
     });
     expect(res.body).toEqual(expected);
+  })
+
+  it('/dogs/:id should return dog details' async () => {
+    const res = await request(app).get('/dogs/1');
+    const Korra = {
+      id: '1',
+      name: 'Korra',
+      age: 1,
+      breed: 'Pyrador',
+      favoriteTreat: 'Oven-Baked Biscuits'
+    };
+    expect(res.body).toEqual(Korra);
   });
 
   afterAll(() => {
